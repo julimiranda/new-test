@@ -8,16 +8,14 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import styles from "./tailwind.css"
-import { PrismaClient } from '@prisma/client'
-import Header from "./components/header";
 
-export const prisma = new PrismaClient()
+import styles from "./tailwind.css";
+import Header from "./components/header";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-]
+];
 
 export default function App() {
   return (
@@ -29,7 +27,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-      <Header/>
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

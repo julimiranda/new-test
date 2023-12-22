@@ -36,3 +36,15 @@ Make sure to deploy the output of `remix build`
 
 - `build/`
 - `public/build/`
+
+nvim ~/.gitconfig 
+
+
+[user]
+        name = llllOllOOll
+        email = 7b37b3@gmail.com
+
+[alias]
+        s = !git status -s 
+        c = !git add --all && git commit -m 
+        l = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
