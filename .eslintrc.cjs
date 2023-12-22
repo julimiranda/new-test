@@ -21,7 +21,10 @@ module.exports = {
   },
 
   // Base config
-  extends: ["eslint:recommended"],
+  extends: ["eslint:recommended", "prettier"],
+  rules: {
+    "prettier/prettier": "error",
+  },
 
   overrides: [
     // React
@@ -49,7 +52,7 @@ module.exports = {
     // Typescript
     {
       files: ["**/*.{ts,tsx}"],
-      plugins: ["@typescript-eslint", "import"],
+      plugins: ["@typescript-eslint", "import", "prettier"],
       parser: "@typescript-eslint/parser",
       settings: {
         "import/internal-regex": "^~/",
