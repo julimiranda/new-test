@@ -28,7 +28,7 @@ export default function SignUp() {
         </div>
 
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <form method="POST">
+          <form method="post">
             <div className="mt-3">
               <label className="font-bold text-sm" htmlFor="email">Email address</label>
               <div className="mt-2">
@@ -54,50 +54,7 @@ export default function SignUp() {
               </div>
           </form>
         </div>
-        {/* 
-        <form method="POST">
-          <div>
-            <div>{email?.email}</div>
-            <label htmlFor="email">Email {}</label>
-            <div>
-              <input
-                className="outline outline-1 rounded-sm"
-                type="text"
-                name="email"
-              />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="name">Name</label>
-            <div>
-              <input
-                className="outline outline-1 rounded-sm"
-                type="text"
-                name="name"
-              />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <div>
-              <input
-                className="outline outline-1 rounded-sm"
-                type="password"
-                name="password"
-              />
-            </div>
-          </div>
-          <div>
-            <button className="bg-blue-400 text-white font-bold w-full rounded-sm mt-5">
-              Send
-            </button>
-          </div>
-        </form>
-        <div className="mt-5 text-sm">
-          <p>
-            Already have an account? <span>Log In</span>
-          </p>
-        </div> */}
+      
       </div>
   );
 }
