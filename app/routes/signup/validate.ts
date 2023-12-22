@@ -1,26 +1,15 @@
-import { ActionFunctionArgs } from "@remix-run/node";
-import { prisma } from "~/root";
+export function validate(email:string, password:string, name:string){
+    let errors : {email?:string, password?:string, name?:string} = {}
 
-export async function action({request}:ActionFunctionArgs){
-    const formData = await request.formData()
-    const email = formData.get("email")
-    const password = formData.get("password")
-    const name = formData.get("name")
-
-    let errors : {email?:string, password?:string} = {}
     if (!email) {
         errors.email = "Email is required"
     }
-
-    const createUser = () => {
-        prisma.user.create({
-            data: {
-                email: email as string,
-                name: name as string,
-                password: password as string,
-            }
-        })
+    if (!password) {
+        errors.password = "Password is required"
+    }
+    if (!name) {
+        errors.name = "Name is required"
     }
 
-    return 
+    return Object.keys(errors).length ? errors : null
 }
